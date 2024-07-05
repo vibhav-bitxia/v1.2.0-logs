@@ -1,0 +1,220 @@
+{
+    "context": {
+        "ttl": "PT30S",
+        "city": "std:011",
+        "action": "on_status",
+        "bap_id": "buypreprod.enam.gov.in",
+        "bpp_id": "sellpreprod.enam.gov.in",
+        "domain": "ONDC:AGR11",
+        "bap_uri": "https://buypreprod.enam.gov.in/ondc/v1",
+        "bpp_uri": "https://sellpreprod.enam.gov.in/ondc/v1",
+        "country": "IND",
+        "timestamp": "2024-07-04T17:15:33.450Z",
+        "message_id": "e6538307-12ce-43a8-a1f1-49533b01e8f1",
+        "core_version": "1.2.0",
+        "transaction_id": "cd467130-37be-42c6-8aec-c90515877a02"
+    },
+    "message": {
+        "order": {
+            "id": "1542",
+            "items": [
+                {
+                    "id": "1785",
+                    "quantity": {
+                        "count": 2
+                    },
+                    "fulfillment_id": "247"
+                }
+            ],
+            "quote": {
+                "ttl": "PT24H",
+                "price": {
+                    "value": "363.6",
+                    "currency": "INR"
+                },
+                "breakup": [
+                    {
+                        "price": {
+                            "value": "3.6",
+                            "currency": "INR"
+                        },
+                        "title": "Tax",
+                        "@ondc/org/item_id": "1785",
+                        "@ondc/org/title_type": "tax"
+                    },
+                    {
+                        "item": {
+                            "price": {
+                                "value": "200.0",
+                                "currency": "INR"
+                            }
+                        },
+                        "price": {
+                            "value": "400.0",
+                            "currency": "INR"
+                        },
+                        "title": "Hit",
+                        "@ondc/org/item_id": "1785",
+                        "@ondc/org/title_type": "item",
+                        "@ondc/org/item_quantity": {
+                            "count": 2
+                        }
+                    },
+                    {
+                        "item": {
+                            "tags": [
+                                {
+                                    "code": "quote",
+                                    "list": [
+                                        {
+                                            "code": "type",
+                                            "value": "item"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "code": "offer",
+                                    "list": [
+                                        {
+                                            "code": "id",
+                                            "value": "HITA9L44EY"
+                                        },
+                                        {
+                                            "code": "type",
+                                            "value": "discount"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "price": {
+                            "value": "-40.0",
+                            "currency": "INR"
+                        },
+                        "title": "Offer",
+                        "@ondc/org/item_id": "1785",
+                        "@ondc/org/title_type": "offer"
+                    },
+                    {
+                        "price": {
+                            "value": "0",
+                            "currency": "INR"
+                        },
+                        "title": "Delivery charges",
+                        "@ondc/org/item_id": "247",
+                        "@ondc/org/title_type": "delivery"
+                    }
+                ]
+            },
+            "state": "Completed",
+            "billing": {
+                "name": "Shivam Gupta",
+                "email": "enam.helpdesk@gmail.com",
+                "phone": "1234567890",
+                "address": {
+                    "city": "Hyderabad",
+                    "name": "Default Address",
+                    "state": "Telangana",
+                    "country": "IND",
+                    "building": "511, Bahvani Mandir",
+                    "locality": "530, Rto Street, Kondapur",
+                    "area_code": "500084"
+                },
+                "created_at": "2024-07-04T17:14:19.000Z",
+                "updated_at": "2024-07-04T17:14:19.000Z"
+            },
+            "payment": {
+                "type": "ON-ORDER",
+                "params": {
+                    "amount": "363.6",
+                    "currency": "INR"
+                },
+                "status": "PAID",
+                "collected_by": "BAP",
+                "@ondc/org/settlement_basis": "delivery",
+                "@ondc/org/settlement_window": "PT24H",
+                "@ondc/org/settlement_details": [
+                    {
+                        "bank_name": "IDFC",
+                        "branch_name": "Gurgaon",
+                        "settlement_type": "rtgs",
+                        "beneficiary_name": "enam",
+                        "settlement_phase": "sale-amount",
+                        "settlement_status": "PAID",
+                        "settlement_ifsc_code": "IDFB0020101",
+                        "settlement_counterparty": "seller-app",
+                        "settlement_bank_account_no": "21483543961"
+                    }
+                ],
+                "@ondc/org/withholding_amount": "0.0",
+                "@ondc/org/buyer_app_finder_fee_type": "percent",
+                "@ondc/org/buyer_app_finder_fee_amount": "0.0"
+            },
+            "provider": {
+                "id": "116",
+                "locations": [
+                    {
+                        "id": "288"
+                    }
+                ]
+            },
+            "documents": [
+                {
+                    "url": "https://s3-ap-south-1.amazonaws.com/pre-prod-seller-bucket/Invoice/891/1720113316322_invoice.pdf",
+                    "label": "Invoice"
+                }
+            ],
+            "created_at": "2024-07-04T17:14:43.801Z",
+            "updated_at": "2024-07-04T17:15:26.335Z",
+            "fulfillments": [
+                {
+                    "id": "247",
+                    "type": "Self-Pickup",
+                    "start": {
+                        "time": {
+                            "range": {
+                                "end": "2024-07-05T17:14:43.924Z",
+                                "start": "2024-07-04T17:44:59.265Z"
+                            },
+                            "timestamp": "2024-07-04T17:15:26.019Z"
+                        },
+                        "contact": {
+                            "email": "buvisupport@gmail.com",
+                            "phone": "8978560404"
+                        },
+                        "location": {
+                            "id": "288",
+                            "gps": "17.4739167, 78.5118889",
+                            "address": {
+                                "city": "AGWANA KALAN",
+                                "name": "Bhui Store kondapur",
+                                "state": "Telangana",
+                                "street": "HYDERABAD",
+                                "locality": "AMBERPET",
+                                "area_code": "500084"
+                            },
+                            "descriptor": {
+                                "name": "Bhui Store kondapur"
+                            }
+                        },
+                        "instructions": {
+                            "code": "1",
+                            "name": "ONDC Order",
+                            "long_desc": "Contact seller at 8978560404 once reached to the pickup location",
+                            "short_desc": "1234567890"
+                        }
+                    },
+                    "state": {
+                        "descriptor": {
+                            "code": "Order-picked-up"
+                        }
+                    },
+                    "tracking": false,
+                    "@ondc/org/TAT": "PT24H",
+                    "@ondc/org/category": "Takeaway",
+                    "@ondc/org/provider_name": "Bhui Store kondapur"
+                }
+            ]
+        }
+    }
+}
